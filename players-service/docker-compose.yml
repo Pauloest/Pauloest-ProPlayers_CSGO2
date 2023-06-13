@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    build: .
+    entrypoint: .docker/entrypoint.sh
+    container_name: players
+    ports:
+      - '3000:3000'
+      - '5566:5555'
+    volumes:
+      - .:/home/node/app
